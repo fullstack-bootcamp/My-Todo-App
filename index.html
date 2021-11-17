@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Todo</title>
+    <link rel="stylesheet" href="tailwind.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+</head>
+<body class="bg-gray-300">
+
+
+    <div  class="md:w-1/2 md:flex flex-col m-auto bg-gray-200 pb-4 rounded border border-gray-400">
+        <div class="bg-blue-500 text-white text-4xl text-center">
+            <h1 class="py-6">My Todo</h1>
+        </div>
+
+        <div class="flex flex-col items-center w-full mt-4 px-2 " id="mainTodoBox">
+             <!--input-->
+            <div class="flex w-full mb-1">
+                <input onkeydown="enterKey(event)" type="text" class="px-2 py-1 rounded flex-1" placeholder="Enter todo">
+                <button  onclick="addItem()" class="bg-gray-400 px-2 rounded"><i class="fas fa-plus-circle"></i></button>
+            </div>
+            <!--todo item -->
+            <div class="flex mt-1 border-2 border-gray-400 rounded items-center w-full px-2">
+                <i onclick="doneTodo(event)" class="far fa-check-circle pr-2" id="tick"></i>
+                <h4 class="flex-1">task 1</h4>
+                <i ondblclick="removeTodo(event)" title="double click if you want to remove"  class="fas fa-trash-alt hover:text-red-800" id="remove"></i>
+            </div>
+
+
+            <div class="flex mt-1 border-2 border-gray-400 rounded items-center w-full px-2  ">
+                <i onclick="doneTodo(event)" class="far fa-check-circle pr-2" id="tick"></i>
+                <h4 class="flex-1">task 2</h4>
+                <i  ondblclick="removeTodo(event)" class="fas fa-trash-alt hover:text-red-800" id="remove"></i>
+            </div>
+            <div class="flex mt-1 border-2 border-gray-400 rounded items-center w-full px-2">
+                <i onclick="doneTodo(event)" class="far fa-check-circle pr-2" id="tick"></i>
+                <h4 class="flex-1">task 3</h4>
+                <i onk ondblclick="removeTodo(event)" class="fas fa-trash-alt hover:text-red-800" id="remove"></i>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+<script src="app.js"></script>
+</body>
+</html>
